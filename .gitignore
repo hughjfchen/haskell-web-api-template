@@ -1,84 +1,57 @@
-# Created by https://www.toptal.com/developers/gitignore/api/osx,haskell,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=osx,haskell,visualstudiocode
-
-### Haskell ###
+### Haskell
 dist
 dist-*
 cabal-dev
 *.o
 *.hi
-*.hie
 *.chi
 *.chs.h
 *.dyn_o
 *.dyn_hi
-.hpc
-.hsenv
-.cabal-sandbox/
-cabal.sandbox.config
 *.prof
 *.aux
 *.hp
 *.eventlog
-.stack-work/
-cabal.project.local
-cabal.project.local~
-.HTF/
+.virtualenv
+.hsenv
+.hpc
+.cabal-sandbox/
+cabal.sandbox.config
+cabal.config
 .ghc.environment.*
+.HTF/
+# Stack
+.stack-work/
+stack.yaml.lock
 
-### OSX ###
-# General
-.DS_Store
-.AppleDouble
-.LSOverride
+### IDE/support
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+*~
+tags
 
-# Icon must end with two \r
-Icon
+# IntellijIDEA
+.idea/
+.ideaHaskellLib/
+*.iml
 
+# Atom
+.haskell-ghc-mod.json
 
-# Thumbnails
-._*
+# VS
+.vscode/
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-### VisualStudioCode ###
-.vscode/*
-!.vscode/tasks.json
-!.vscode/launch.json
-*.code-workspace
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
-
-# End of https://www.toptal.com/developers/gitignore/api/osx,haskell,visualstudiocode
-
-*jwt.sh
-certs/
+# Emacs
+*#
 TAGS
-build/
-bin/
-obj/
-dist/
-sdist/
-dist-docs*/
-chakra-exe.prof.html
-tmp/
-cache/
-packagedb/
-*.tar.gz
+
+# other
+.DS_Store
+
+# nix
+result
+result-*
+

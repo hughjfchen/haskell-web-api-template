@@ -1,0 +1,13 @@
+cradle:
+  cabal:
+    - path: "./src"
+      component: "lib:haskell-web-api-template"
+
+    - path: "./app"
+      component: "haskell-web-api-template:exe:haskell-web-api-template"
+
+    - path: "./test"
+      component: "haskell-web-api-template:test:haskell-web-api-template-test"
+
+    - path: "./benchmark"
+      component: "haskell-web-api-template:bench:haskell-web-api-template-benchmark"
