@@ -7,12 +7,12 @@ defaultPlatformProject.pkgs.lib.mapAttrs (_: pkgs: rec {
   recurseForDerivations = true;
 
   haskell-web-api-template = import ./default.nix { nativePkgs = pkgs;
-                                     customModules = [ { packages.haskell-web-api-template.dontStrip = false; } ] ++ (if pkgs.stdenv.hostPlatform.isMusl then 
+                                     customModules = [ { packages.chakra.dontStrip = false; } ] ++ (if pkgs.stdenv.hostPlatform.isMusl then 
                                                         [
                                                           # following customization is to build fully static binary for project using postgresql-libpq
                                                           { packages.postgresql-libpq.flags.use-pkg-config = true;  }
                                                           # The order of -lssl and -lcrypto is important here
-                                                          { packages.haskell-web-api-template.configureFlags = 
+                                                          { packages.chakra.configureFlags = 
                                                             [
                                                               "--ghc-option=-optl=-lssl"
                                                               "--ghc-option=-optl=-lcrypto"

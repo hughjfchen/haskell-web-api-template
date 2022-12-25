@@ -39,7 +39,8 @@ main = do
   -- Load the AppSettings data from ENV variables
   withAppSettingsFromEnv $ \appSettings -> do
     -- Override the version from cabal file
-    let ver = $(simpleVersion Paths_chakra.version) -- TH to get cabal project's git sha version
+    -- let ver = $(simpleVersion Paths_chakra.version) -- TH to get cabal project's git sha version
+    let ver = "0.0.1.0" -- Use string leteral to avoid building fully static exe failed
         infoDetail = appSettings {appVersion = T.pack ver}
     logFunc <- buildLogger (appEnvironment infoDetail) (appVersion infoDetail)
     userRepo <- U.newInMemRepo

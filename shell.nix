@@ -3,7 +3,6 @@
   defaultPlatformProject.haskell-web-api-template.shellFor {
     # Include only the *local* packages of your project.
     packages = ps: with ps; [
-      #haskell-web-api-template
       haskell-web-api-template
       #pkgb
     ];
